@@ -72,14 +72,23 @@ class _FreightCalculatorScreenState extends State<FreightCalculatorScreen> {
 
     setState(() {
       if (valorFinal > 138) {
-        cubagem = "Cubagem: ${formatador.format(volume)} M³";
+        if (volume == 0) {
+          cubagem = "";
+        } else {
+          cubagem = "Cubagem: ${formatador.format(volume)} M³";
+        }
+
         valorFrete1 = "Valor do Frete: ${formatador.format(valorFinal)}";
         valorFrete2 =
             "Valor do Frete (5% +): ${formatador.format(valorFinal * 1.05)}";
         valorFrete3 =
             "Valor do Frete (5% -): ${formatador.format(valorFinal * 0.95)}";
       } else {
-        cubagem = "Cubagem: ${formatador.format(volume)} M³";
+        if (volume == 0) {
+          cubagem = "";
+        } else {
+          cubagem = "Cubagem: ${formatador.format(volume)} M³";
+        }
         valorFrete1 = "Valor do Frete: ${formatador.format(valorFinal)}";
         valorFrete2 = "";
         valorFrete3 = "";
