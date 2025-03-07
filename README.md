@@ -22,7 +22,7 @@ Com essas informações, o app calcula:
 ✅ **Valor do frete com base em três critérios**:
    - Percentual sobre o valor da Nota Fiscal
    - Peso da mercadoria
-   - Volume da mercadoria  
+   - Volume da mercadoria
 ✅ **Maior valor de frete** entre as opções calculadas  
 ✅ **Margem de erro de 5% para mais e para menos**
 
