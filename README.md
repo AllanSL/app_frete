@@ -2,7 +2,7 @@
 
 ## 📖 Sobre o Projeto
 
-Este projeto surgiu a partir da necessidade de conferir os valores de frete das mercadorias recebidas no estoque, comparando com os valores informados pela transportadora. Inicialmente, foi desenvolvida uma planilha para realizar esses cálculos, mas, visando aprendizado e praticidade, decidi criar também um aplicativo.
+Este projeto surgiu da necessidade de conferir os valores de frete das mercadorias recebidas no estoque, comparando-os com os valores informados pela transportadora. Inicialmente, foi desenvolvida uma planilha para realizar esses cálculos, mas, visando aprendizado e praticidade, decidi criar também um aplicativo.
 
 Após validar a lógica de cálculo na planilha, desenvolvi o app como um teste e estudo. Quando apresentei a solução, o responsável pelo recebimento viu valor na aplicação e solicitou que também fosse encaminhada para uso, pois ter o aplicativo no celular tornaria o processo mais ágil e prático.
 
@@ -10,21 +10,21 @@ Após validar a lógica de cálculo na planilha, desenvolvi o app como um teste 
 
 ## 🚀 Funcionalidades
 
-O aplicativo realiza o cálculo do frete de acordo com os seguintes parâmetros fornecidos pelo usuário:
+O aplicativo realiza o cálculo do frete com base nos seguintes parâmetros fornecidos pelo usuário:
 
 - **Valor da Nota Fiscal** (R$)
 - **Peso da mercadoria** (Kg)
 - **Dimensões da carga** (comprimento, largura e altura em metros)
 
-Com essas informações, o app calcula:
+Com essas informações, o app retorna:
 
-✅ **Cubagem da carga** (volume em m³)  
-✅ **Valor do frete com base em três critérios**:
-   - Percentual sobre o valor da Nota Fiscal
-   - Peso da mercadoria
-   - Volume da mercadoria  
-✅ **Maior valor de frete** entre as opções calculadas  
-✅ **Margem de erro de 5% para mais e para menos**
+- ✅ **Cubagem da carga** (volume em m³)
+- ✅ **Valor do frete com base em três critérios**:
+  - Percentual sobre o valor da Nota Fiscal
+  - Peso da mercadoria
+  - Volume da mercadoria
+- ✅ **Maior valor de frete** entre as opções calculadas
+- ✅ **Margem de erro de 5% para mais e para menos**
 
 ---
 
