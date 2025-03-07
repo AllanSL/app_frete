@@ -29,9 +29,9 @@ class _FreightCalculatorScreenState extends State<FreightCalculatorScreen> {
   final TextEditingController alturaController = TextEditingController();
   final TextEditingController pesoController = TextEditingController();
   final TextEditingController valorNFController = TextEditingController();
-  String valorFrete1 = "";
-  String valorFrete2 = "";
-  String valorFrete3 = "";
+  String valorFrete = "";
+  String valorFrete5Mais = "";
+  String valorFrete5Menos = "";
   String cubagem = "";
 
   // Função para corrigir o separador decimal
@@ -78,10 +78,10 @@ class _FreightCalculatorScreenState extends State<FreightCalculatorScreen> {
           cubagem = "Cubagem: ${formatador.format(volume)} M³";
         }
 
-        valorFrete1 = "Valor do Frete: ${formatador.format(valorFinal)}";
-        valorFrete2 =
+        valorFrete = "Valor do Frete: ${formatador.format(valorFinal)}";
+        valorFrete5Mais =
             "Valor do Frete (5% +): ${formatador.format(valorFinal * 1.05)}";
-        valorFrete3 =
+        valorFrete5Menos =
             "Valor do Frete (5% -): ${formatador.format(valorFinal * 0.95)}";
       } else {
         if (volume == 0) {
@@ -89,9 +89,9 @@ class _FreightCalculatorScreenState extends State<FreightCalculatorScreen> {
         } else {
           cubagem = "Cubagem: ${formatador.format(volume)} M³";
         }
-        valorFrete1 = "Valor do Frete: ${formatador.format(valorFinal)}";
-        valorFrete2 = "";
-        valorFrete3 = "";
+        valorFrete = "Valor do Frete: ${formatador.format(valorFinal)}";
+        valorFrete5Mais = "";
+        valorFrete5Menos = "";
       }
     });
   }
@@ -182,14 +182,14 @@ class _FreightCalculatorScreenState extends State<FreightCalculatorScreen> {
                       fontWeight: FontWeight.bold,
                       color: Colors.blue),
                   textAlign: TextAlign.center),
-              Text(valorFrete1,
+              Text(valorFrete,
                   style: TextStyle(
                       fontSize: max(20,
                           min(MediaQuery.of(context).size.width * 0.05, 30)),
                       fontWeight: FontWeight.bold,
                       color: Colors.blue),
                   textAlign: TextAlign.center),
-              Text(valorFrete2,
+              Text(valorFrete5Mais,
                   style: TextStyle(
                       fontSize: max(20,
                           min(MediaQuery.of(context).size.width * 0.05, 30)),
@@ -197,7 +197,7 @@ class _FreightCalculatorScreenState extends State<FreightCalculatorScreen> {
                       color: Colors.blue),
                   textAlign: TextAlign.center),
               Text(
-                valorFrete3,
+                valorFrete5Menos,
                 style: TextStyle(
                     fontSize: max(
                         20, min(MediaQuery.of(context).size.width * 0.05, 30)),
